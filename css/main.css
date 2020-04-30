@@ -107,23 +107,27 @@ textarea {
     font-family: 'Open Sans', sans-serif;
     font-size: 1em;
     text-align: left;
+    color: #e2e3ed;
    }
 
    ul,
    ol {
      list-style-type: none;
-      text-decoration: none;
-      text-transform: capitalize;
+      text-transform: uppercase;
    }
 
    a {
      color: #e2e3ed;
      text-decoration: none;
    }
-
+   h1 {
+     font-family: 'Poppins', sans-serif;
+     color: #e2e3ed;
+   }
    h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875em;
+    font-weight: 500;
    }
 
    h3,
@@ -131,11 +135,13 @@ textarea {
      font-family: 'Poppins', sans-serif;
      font-size: 1.125em;
      margin: 20px 0;
+     font-weight: 500;
    }
 
 
    p {
      font-size: .875em;
+     line-height: 1.285;
    }
 
    img {
@@ -175,6 +181,7 @@ footer {
 
   header {
     padding: 15px 0;
+    background-color: #202322;
 }
 
 header nav {
@@ -183,6 +190,8 @@ header nav {
     align-items: center;
     flex-flow: row wrap;
     width: 60%;
+    font-size: 1.125em;
+  font-weight: 700;
 }
 
 header nav ul {
@@ -190,13 +199,21 @@ header nav ul {
   justify-content: space-around;
   width: 100%;
 }
+
+header nav ul li {
+  font-size: 1.125em;
+}
+
 .header-divider {
-  width: 100%
+  width: 100%;
   height: 1px;
   margin: 10px 0 20px 0;
+  background: #3a3a3a;
 }
 footer {
   flex-direction: column;
+  text-align: center;
+  background-color: #202322;
 }
 footer p {
   margin: 0;
@@ -227,6 +244,7 @@ footer .social-icons p {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-image: url('../img/workweek.png')
 }
 
 /* Aside */
@@ -235,14 +253,18 @@ aside {
   justify-content: center;
   align-items: center;
   flex-flow: row wrap;
+  background-color: #527158;
 }
-
+aside .form{
+  margin-top: 30px;
+}
 /* features */
 
 .features {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-image: url('../img/features.png');
 }
 .features h2 {
   margin-bottom: 60px;
@@ -254,10 +276,11 @@ aside {
   flex-flow: row wrap;
 }
 .features article {
-  width: 60%;
+  width: 63%;
   margin: 30px 0;
 }
 .features p {
+  text-align: center;
   margin: 0;
 }
 /* reviews */
@@ -266,6 +289,7 @@ aside {
   display: flex;
   justify-content: center;
   flex-flow: row wrap;
+  background-color: #2a423a;
 }
 .reviews h2 {
   margin-bottom: 40px;
@@ -276,6 +300,7 @@ aside {
 }
 /***************** ABOUT PAGE *************************/
 .mission {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -283,6 +308,7 @@ aside {
 }
 
 .contact-section {
+  background-color: #2a423a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -294,6 +320,7 @@ aside {
 /*************** FAQ PAGE ****************/
 
 .faq {
+  background-color: #527158;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -309,10 +336,15 @@ aside {
 }
 .faq h2 {
   margin-bottom: 40px;
+  line-height: 1;
 }
 .faq-content {
   margin-bottom: 50px;
 }
+
+.faq-content h4 {
+    line-height: 1.333;
+  }
 /* ==========================================================================
    Helper classes
    ========================================================================== */
@@ -401,6 +433,31 @@ aside {
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
+   aside .form {
+  margin-top: 30px;
+}
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
 
    @media only screen and (min-width:768px) {
    /*Tablet styles here*/
@@ -410,7 +467,15 @@ aside {
      max-width: 640px;
      margin: 100px 0;
    }
+   h2 {
+     font-size: 2.25em;
+     line-height: 1.333;
+   }
 
+   h3 {
+     font-size: 1.5em;
+     line-height: 1.25;
+   }
    /* Header */
    header {
      justify-content: space-around;
@@ -421,6 +486,9 @@ aside {
      width: 100%;
      justify-content: space-between;
    }
+   header figure {
+       width: 30%;
+     }
 
    header nav {
      width: 20%;
@@ -434,7 +502,11 @@ aside {
      display: none;
    }
    /* Hero Area */
-
+   .hero-area h1 {
+       font-size: 3em;
+       line-height: 1;
+       margin: 0;
+   }
    /* Aside */
    aside .content-wrapper {
      margin: 50px 0;
@@ -467,11 +539,16 @@ aside {
      display: flex;
      justify-content: space-between;
    }
-
+   .reviews h2 {
+       width: 85%;
+     }
    .reviews article div {
      width: 49%;
    }
-
+   .reviews h3 {
+       width: 75%;
+       margin: 0;
+   }
    /* Footer */
    footer .content-wrapper {
      width: 65%;
