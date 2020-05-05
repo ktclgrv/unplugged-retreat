@@ -113,6 +113,8 @@ textarea {
    ul,
    ol {
      list-style-type: none;
+     margin: 0;
+     padding: 0;
    }
 
    a {
@@ -120,7 +122,7 @@ textarea {
      text-decoration: none;
    }
 
-   }
+
    h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 1.875em;
@@ -250,11 +252,7 @@ footer .social-icons p i {
   font-size: 1.3125em;
 }
 
-footer .social-icons p {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+
   footer .copyright {
   margin: 20px 0;
 }
@@ -277,12 +275,7 @@ footer .social-icons p {
   font-weight: 500;
   line-height: 1.2;
 }
-.header-divider {
-  background: #3a3a3a;
-  height: 1px;
-  width: 100%;
-  margin: 10px 0 20px 0;
-}
+
 
 /* Aside */
 aside {
@@ -295,6 +288,28 @@ aside {
 aside .form{
   margin-top: 30px;
 }
+
+input[type=text] {
+  box-sizing: border-box;
+  width: 100%;
+  color: #2a423a;
+  font-style: italic;
+  padding: 1em;
+}
+
+input[type=button] {
+  width: 100%;
+  padding: 20px 0;
+  margin-top: 20px;
+  background-color: #2a423a;
+  font-family: 'Poppins', Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  color: #e2e3ed;
+  border: none;
+  text-align: center;
+  text-transform: uppercase;
+}
 /* features */
 
 .features {
@@ -303,7 +318,6 @@ aside .form{
   flex-flow: row wrap;
   background-image: url('../img/features.png');
   background-size: cover;
-  background-repeat: no-repeat;
   background-position: center;
 }
 .features h2 {
@@ -496,29 +510,7 @@ aside .form{
    ========================================================================== */
 
 
-input[type=text] {
-  box-sizing: border-box;
-  width: 100%;
-  color: #2a423a;
-  font-style: italic;
-  padding: 1em;
-}
 
-input[type=button] {
-  width: 100%;
-  padding: 20px 0;
-  margin-top: 20px;
-  background-color: #2a423a;
-  font-family: 'Poppins', Helvetica, Arial, sans-serif;
-  font-weight: 500;
-  font-size: 1.125em;
-  color: #e2e3ed;
-  border: none;
-  text-align: center;
-  text-transform: uppercase;
-}
-<!-- FontAwesome CDN version 5.5 -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
    @media only screen and (min-width:768px) {
    /*Tablet styles here*/
@@ -604,7 +596,10 @@ input[type=button] {
 
    .features .features-item-description {
      width: 62%;
-   }
+}
+     .features i {
+      margin-bottom: 30px;
+    }
 
    /* Reviews */
    .reviews article {
@@ -614,7 +609,9 @@ input[type=button] {
    .reviews h2 {
        width: 85%;
      }
-   .reviews article div,
+   .reviews article figure {
+     width: 49%;
+   }
    .reviews article div {
      width: 49%;
    }
@@ -645,6 +642,9 @@ input[type=button] {
    footer p {
      line-height: 1.285;
    }
+   footer .social-icons {
+    width: 12.5em;
+  }
    footer .copyright {
      width: 100%;
    }
@@ -657,7 +657,7 @@ input[type=button] {
      display: flex;
      justify-content: space-between;
      align-items: center;
-     padding-top: 20px
+     padding-top: 20px;
    }
 
    .mission-content p {
@@ -696,11 +696,15 @@ input[type=button] {
    .faq h2 {
      width: 100%;
    }
-
+}
    @media only screen and (min-width: 1200px) {
    /*Desktop styles here*/
 
    /* General styles */
+   header {
+    padding: 15px 0;
+  }
+
    .content-wrapper {
      max-width: 960px;
    }
@@ -764,7 +768,7 @@ input[type=button] {
 
    .mission h2,
    .contact-section .content-wrapper h2 {
-     width: 95;
+     width: 95%;
      font-size: 3em;
    }
    .contact-content h4 {
